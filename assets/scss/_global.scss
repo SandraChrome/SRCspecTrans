@@ -1,0 +1,167 @@
+.container {
+    max-width: 1450px;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.global-btn {
+    font-weight: 500;
+    line-height: 19px;
+    color: $whiteColor;
+
+    padding: 1.6rem 2.6rem;
+
+    background-color: $secondColor;
+    border-radius: 8px;
+
+    transition: background-color 0.1s linear 0s;
+
+    &:hover {
+        background-color: darken($color: $secondColor, $amount: 10%);
+    }
+}
+
+.global-title {
+    font-weight: 500;
+    font-size: 4.2rem;
+    line-height: 119%;
+    color: $titleColor;
+}
+
+@media (max-width: 769px) {
+    .global-title {
+        font-size: 3.4rem;
+        line-height: 117%;
+    }
+}
+
+@media (max-width: 426px) {
+    .global-title {
+        font-size: 2.4rem;
+        line-height: 116%;
+    }
+}
+
+.card-service {
+    &__item {
+        display: flex;
+        column-gap: 3.8rem;
+    }
+
+    &__image {
+        max-width: 58rem;
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    &__image-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        max-width: 79.8rem;
+        width: 100%;
+    }
+
+    &__item-title {
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 130%;
+
+        color: $counterColor;
+
+        margin-bottom: 2.4rem;
+    }
+
+    &__item-text {
+        font-size: 1.8rem;
+        line-height: 130%;
+        color: $counterColor;
+        margin-bottom: 6rem;
+        span {
+            color: $secondColor;
+        }
+    }
+
+    &__item-price {
+        max-width: 56.6rem;
+    }
+
+    &__price-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-weight: 300;
+        line-height: 130%;
+        color: $counterColor;
+
+        max-width: 55.6rem;
+        width: 100%;
+
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__price-line {
+        flex: 1 1 auto;
+        height: 1.5rem;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    &__price-value {
+        span {
+            color: $secondColor;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .card-service {
+        &__item {
+            flex-direction: column;
+            row-gap: 3rem;
+        }
+        &__image {
+            max-width: none;
+            border-radius: 8px;
+        }
+        &__item-price {
+            max-width: none;
+        }
+        &__price-item {
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .card-service {
+        &__image {
+            height: 222px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .card-service {
+        &__item-title {
+            font-size: 2.4rem;
+            margin-bottom: 2.1rem;
+        }
+        &__item-text {
+            font-size: 14px;
+            margin-bottom: 2.1rem;
+        }
+        &__price-item {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

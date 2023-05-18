@@ -1,0 +1,56 @@
+.materials-tabs {
+    margin-top: 16rem;
+    margin-bottom: 5rem;
+
+    &__buttons {
+        margin-bottom: 10rem;
+        display: flex;
+    }
+
+    &__btn {
+        flex: 1 1 33.333%;
+
+        font-size: 2.4rem;
+        line-height: 116%;
+        color: rgba(30, 30, 28, 0.6);
+
+        background: transparent;
+
+        border-bottom: 1px solid #cdcdcd;
+
+        transition: all 0.1s linear 0s;
+
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 8px;
+            left: 0;
+            bottom: 0;
+            background-color: transparent;
+            z-index: 5;
+            transition: all 0.1s linear 0s;
+        }
+        &:hover,
+        &.mixitup-control-active {
+            border-color: $secondColor;
+            color: $secondColor;
+
+            &.materials-tabs__btn::after {
+                background-color: $secondColor;
+                filter: blur(20px);
+            }
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .materials-tabs {
+        &__buttons {
+            flex-direction: column;
+            row-gap: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+}

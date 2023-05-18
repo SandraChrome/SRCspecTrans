@@ -1,0 +1,89 @@
+.why {
+    margin-bottom: 8rem;
+    
+    &__inner {
+    }
+
+    &__title {
+        margin-bottom: 5.8rem;
+    }
+
+    &__advantages {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 1.3rem;
+    }
+
+    &__advantages-item {
+        
+    }
+
+    &__advantages-item-wrap {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        padding: 2.5rem;
+
+        border: 1px solid #a8a8a8;
+        border-radius: 8px;
+        height: 9rem;
+    }
+
+    &__advantages-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    &__advantages-text {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 140%;
+        color: $whyTextColor;
+
+        span {
+            color: $secondColor;
+        }
+    }
+}
+
+@media (max-width:1037px) {
+    .why {
+        &__advantages {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 1.3rem;
+        }
+        &__advantages-item:nth-child(3) {
+            grid-row: span 2;
+            div {
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:641px) {
+    .why {
+        &__advantages {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:433px) {
+    .why {
+        &__title {
+            margin-bottom: 2.5rem;
+        }
+        &__advantages {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 1.3rem;
+        }
+        &__advantages-item:nth-child(3) {
+            grid-row: span 1;
+            div {
+                height: 9rem;
+            }
+        }
+    }
+}

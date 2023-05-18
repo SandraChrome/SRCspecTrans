@@ -1,0 +1,109 @@
+.about {
+    margin-bottom: 8rem;
+
+    &__inner {
+        display: flex;
+        column-gap: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 57.9rem;
+    }
+
+    &__title {
+        margin-bottom: 2.8rem;
+    }
+
+    &__content-text {
+        font-size: 1.8rem;
+        line-height: 142%;
+        letter-spacing: 0.005em;
+        color: $textColor;
+    }
+
+    &__stats {
+        padding: 11.4rem 12.75rem 15.5rem 8.4rem;
+        background-color: $block-bg;
+        border-radius: 24px;
+
+        display: flex;
+        justify-content: center;
+        column-gap: 9.7rem;
+    }
+
+    &__counter {
+        text-align: center;
+    }
+
+    &__conter-value {
+        font-weight: 300;
+        font-size: 8.8rem;
+        line-height: 142%;
+        letter-spacing: 0.005em;
+        color: $counterColor;
+        margin-bottom: 1.8rem;
+        span {
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 142%;
+            color: $secondColor;
+
+            vertical-align: top;
+        }
+    }
+
+    &__counter-title {
+        font-size: 2.4rem;
+        line-height: 142%;
+        letter-spacing: 0.005em;
+        color: $textColor;
+    }
+}
+
+@media (max-width: 913px) {
+    .about {
+        &__stats {
+            padding: 7.4rem 4.75rem 10.5rem 4.4rem;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .about {
+        &__stats {
+            width: 100%;
+            padding: 7.4rem 4.75rem 10.5rem 4.4rem;
+        }
+        &__inner {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        &__content {
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .about {
+        &__content-text {
+            font-size: 14px;
+            line-height: 142%;
+        }
+        &__stats {
+            flex-direction: column;
+            row-gap: 4rem;
+            padding: 2rem 0 4rem;
+        }
+        &__conter-value {
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 142%;
+            span {
+                position: absolute;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.rent {
+    margin-top: 16rem;
+    margin-bottom: 5rem;
+}
+.card-service {
+
+    &__item--rent {
+        &:not(:last-child) {
+            margin-bottom: 4.6rem;
+        }
+    }
+}
